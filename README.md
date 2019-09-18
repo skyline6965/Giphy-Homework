@@ -1,5 +1,10 @@
 # Giphy-Homework
 
+https://api.giphy.com/v1/gifs/random?api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL&tag=sports
+
+obtained queryURL and API. 
+
+setting up search bar and on click <<>>
 
 
 **********************************************************************************

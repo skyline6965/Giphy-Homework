@@ -14,7 +14,9 @@
 </head>
 
 <body>
-    <button id="car-button">
+
+    <h1>Click on the button to see some cars bro!</h1>
+    <button id="search-button">
         VROOM! VROOM!
     </button>
 
@@ -25,9 +27,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
 
-        $("#car-button").on("click", fucntion(){
-            var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=cats";
+        var apiKey = "api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL"
+
+        $("#search-button").on("click", function () {
+            var queryURL = "https://api.giphy.com/v1/gifs/random?" + apiKey + "&tag=sports";
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+            .then(function(response){
+                console.log(response);
+
+                
+            })
+            
+
         })
+
+        // search bar
+        // 
 
 
 
