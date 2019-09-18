@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CARS! CARS! CARS!</title>
+    <title>Too Many GiFs, Too Little Time</title>
 
 
 
@@ -15,10 +15,18 @@
 
 <body>
 
-    <h1>Click on the button to see some cars bro!</h1>
+    <h1>Click on the button to see some Gifs, bro!</h1>
+    <div id="gif-div">
+
+    </div>
     <button id="search-button">
-        VROOM! VROOM!
+        Gif Portal
+        
     </button>
+
+    <input id="search-bar" type="text">
+
+
 
     <div id="images">
 
@@ -27,20 +35,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
 
+        
+
+
         var apiKey = "api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL"
+        var searchResults = $("#search-bar").val().trim();
+        var category;
 
         $("#search-button").on("click", function () {
-            var queryURL = "https://api.giphy.com/v1/gifs/random?" + apiKey + "&tag=sports";
+            var queryURL = "https://api.giphy.com/v1/gifs/trending?" + apiKey + "";
             $.ajax({
                 url: queryURL,
                 method: "GET"
             })
-            .then(function(response){
-                console.log(response);
+                .then(function (response) {
+                    console.log(response);
 
-                
-            })
-            
+
+                })
+
 
         })
 
