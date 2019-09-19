@@ -4,7 +4,20 @@ https://api.giphy.com/v1/gifs/random?api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL&ta
 
 obtained queryURL and API. 
 
-setting up search bar and on click <<>>
+setting up search bar and on click 
+
+on click working, 
+
+getting results from Giphy, 
+
+created img div and img tags in that div. seems to be working.
+
+PROBLEMS
+1. getting ERR_File not found and its ref my computer file ("C:/Users/skyli/Giphy-Homework/etc..)-seems like something is linked to my computer
+
+2. need to get values from search bar before ajax function runs
+
+
 
 
 **********************************************************************************
