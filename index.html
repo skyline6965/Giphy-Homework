@@ -7,55 +7,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Too Many GiFs, Too Little Time</title>
 
-
-
-
-
 </head>
 
 <body>
-
     <h1>Click on the button to see some Gifs, bro!</h1>
     <div id="gif-div">
-
     </div>
-    <button id="search-button">
-        Gif Portal
-        
-    </button>
 
     <input id="search-bar" type="text">
 
-
+    <button id="search-button">
+        Gif Portal
+    </button>
 
     <div id="images">
-
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
 
-        
 
+        // http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=YOUR_API_KEY&limit=5
 
-        var apiKey = "api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL"
+        var apiKey = "&api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL&limit=10";
         var searchResults = $("#search-bar").val().trim();
-        var category;
+        // need to link search-bar results to category
+        var category = "q=tacos";
+        // $("search-bar").val();
 
+        console.log(category);
+
+        // onclick search button, run function
         $("#search-button").on("click", function () {
-            var queryURL = "https://api.giphy.com/v1/gifs/trending?" + apiKey + "";
+            var queryURL = "https://api.giphy.com/v1/gifs/search?" + category + apiKey;
             $.ajax({
                 url: queryURL,
                 method: "GET"
             })
                 .then(function (response) {
-                    console.log(response);
+                    // console.log(response);
+                    var results = response.data;
+                    console.log(results);
+
+                    for (var i = 0; i < results.length; i++) {
 
 
-                })
+                        // getting images from response
+                        // var imageURL = results.images;
+
+                        // creating and storing div tag for images
+                        var imageDiv = $("<div>");
+
+                        // creating and storing img tag 
+                        var newImages = $("<img>")
+
+                        // set the src attr of the image
+                        newImages.attr("src", results[i].images);
+
+                        // appending img tag to imageCache
+                        imageDiv.append(newImages)
+
+                        // imageCache.attr("src", imageURL);
+                        // imageCache.attr("alt", "...")
+
+                        $("#images").prepend(imageDiv);
+
+                    }
+                });
 
 
-        })
+        });
 
         // search bar
         // 
