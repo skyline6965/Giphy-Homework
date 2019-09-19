@@ -31,16 +31,17 @@
         
         // onclick search button, run function
         $("#search-button").on("click", function () {
-            var apiKey = "&api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL&limit=5";
+            var apiKey = "&api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL&limit=5&rating=g";
             
             var searchResults = $("#search-bar").val();
             // get values from search bar
+            console.log(searchResults);
 
             // problem is, when i press the search button, its not getting the value of
             // what the user entered in time before the function gets ran.
             
                                                                 // searchResults
-            var queryURL = "https://api.giphy.com/v1/gifs/search?" + "q=tacos" + apiKey;
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchResults + apiKey;
 
              
             console.log(queryURL);
@@ -65,7 +66,7 @@
                         var newImages = $("<img>")
 
                         // set the src attr of the image
-                        newImages.attr("src", results[i].image);
+                        newImages.attr("src", results[i].images.original.url);
 
                         // appending img tag to imageCache
                         imageDiv.append(newImages);
