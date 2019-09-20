@@ -15,7 +15,11 @@ created img div and img tags in that div. seems to be working.
 PROBLEMS
 1. getting ERR_File not found and its ref my computer file ("C:/Users/skyli/Giphy-Homework/etc..)-seems like something is linked to my computer
 
-2. need to get values from search bar before ajax function runs
+2. need to get values from search bar before ajax function runs !!!!RESOLVED!!!!!!!!!!!!!!!!!
+
+Step 2.
+
+grab input searches and create a button. <<>>
 
 
 

@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+
+}
+
+
+.search-tags {   
+    
+    margin: 10px;    
+
+}
+
+#tabs {
+    height: 100px;
+    width: 100%;
+    border: 2px;
+    border-style: double;
+    overflow: scroll;
+}
