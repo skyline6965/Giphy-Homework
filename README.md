@@ -19,7 +19,13 @@ PROBLEMS
 
 Step 2.
 
-grab input searches and create a button. <<>>
+grab input searches and create a button. 
+
+ended up setting up too many things the wrong way in order to use them properly later on. 
+(i.e. using "ids" or forms and input fields). was unable to get gifs to display as a static
+image and making them clickable. as well as not being able to make the created buttons usable. really wish i could've done this one better, i really liked the project           <<<>>>
+
+
 
 
 

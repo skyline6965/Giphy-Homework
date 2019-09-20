@@ -1,18 +1,20 @@
-.container {
-    width: 100%;
-
-}
-
-
-/* .search-tags {   
-    
-    margin: 10px;    
+/* 
+.body {
 
 } */
 
+
+.container {
+    width: 100%;
+    align-content: center;
+    margin: 0 auto;
+
+
+}
+
 #tabs {
     height: 100px;
-    width: 100%;
+    width: 60%;
     border: 2px;
     border-style: double;
     overflow: scroll;
