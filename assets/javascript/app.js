@@ -1,6 +1,3 @@
-
-
-
 $("#search-button").on("click", function () {
     var apiKey = "&api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL&limit=5";
     var searchResults = $("#search-bar").val();
