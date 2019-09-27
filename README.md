@@ -1,5 +1,10 @@
 # Giphy-Homework
 
+
+https://skyline6965.github.io/Giphy-Homework/      <------Deployed Site
+
+
+
 https://api.giphy.com/v1/gifs/random?api_key=L1WjOIVP0GXxib9Lxv6ExK9hleZzFGtL&tag=sports
 
 obtained queryURL and API. 
